@@ -1,0 +1,32 @@
+# 'binary' is an alias of '-text -diff'
+
+# default behaviour
+* text=auto
+
+# source / make files
+*.hpp             text
+*.cpp             text
+*.h               text
+*.c               text
+*.bat             text
+*.sh              text
+*.rc              text
+*.def             text
+*.txt             text
+*.cmake           text
+
+# res / images etc
+*.ico             binary
+*.png             binary
+
+
+# binary artifacts
+*.exe             binary
+*.so              binary
+*.dll             binary
+*.lib             binary
+*.pdb             binary
+
+# misc files
+*.natvix          eol=crlf
+*.db              binary

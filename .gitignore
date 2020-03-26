@@ -1,0 +1,47 @@
+syntax:glob
+
+#general
+
+*.bak
+*.*~
+*.orig
+*.autosave
+*.log
+*.tmp
+
+# cmake
+
+build/
+build_*/
+bld/
+bld_*/
+
+# c++
+
+*.pdb
+*.exe
+*.pdb
+*.so*
+*.ilk
+*.lib
+*.exp
+*.dll
+*.o
+*.obj
+
+
+# visual studio
+
+*.sln
+*.sdf
+*.opensdf
+*.opendb
+*.VC.db
+*.pch
+*.suo
+.vs/
+*.ipch
+ipch/
+*.vspscc
+*.vcproj
+*.user
