@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 3.2)
-project(QmlTest CXX)
 
 include(sources.cmake)
 
@@ -14,7 +13,7 @@ find_package(Qt5 COMPONENTS Core Quick Qml REQUIRED)
 qt5_add_resources(RESOURCES resources.qrc)
 
 if (${QML_FROM_SRC_DIR})
-    add_definitions(-DQML_DIR="${CMAKE_SOURCE_DIR}/qml")
+    add_definitions(-DQML_DIR="${CMAKE_SOURCE_DIR}/src/qml")
 endif()
 
 if(WIN32)
@@ -23,7 +22,7 @@ elseif(APPLE)
   set(GUI_TYPE MACOSX_BUNDLE)
 endif()
 
-add_executable(QmlTest ${GUI_TYPE} ${SOURCES} ${RESOURCES})
+add_executable(${CMAKE_PROJECT_NAME} ${GUI_TYPE} ${SOURCES} ${RESOURCES})
 
 if (${DEPLOY_QT_LIBS})
     add_custom_command(TARGET QmlTest
@@ -33,4 +32,4 @@ if (${DEPLOY_QT_LIBS})
     )
 endif()
 
-target_link_libraries(QmlTest Qt5::Core Qt5::Quick Qt5::Qml)
+target_link_libraries(${CMAKE_PROJECT_NAME} Qt5::Core Qt5::Quick Qt5::Qml)

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.2)
-project(QmlTest CXX C)
+project(QmlTemplate CXX C)
 
 include(CMake/base.cmake)
 
